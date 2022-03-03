@@ -2,7 +2,7 @@
 
 Inky wHAT eInk display from Pimoroni driven by a Raspberry Pi Zero (or any other Raspberry Pi) to display a seven day weather forecast.
 
-<img src="https://www.dropbox.com/s/uhkezjmmvqs427n/IMG_6384.jpg?dl=0" width="640" align="center">
+<img src="https://dl.dropboxusercontent.com/s/uhkezjmmvqs427n/IMG_6384.jpg?dl=0" width="640" align="center">
 
 Icons and code table are from Erik Flowers:
 
