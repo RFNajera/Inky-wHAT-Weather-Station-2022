@@ -241,9 +241,9 @@ api_key = "<your API key>"
 if (api_key == "<your API key>"):
     print("You forgot to enter your API key")
     exit()
-lat = "52.988040"
-lon = "8.866697"
-url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&exclude=hourly&appid=%s&units=metric" % (
+lat = "40.6976633" # Latitude (north/south) for New York City
+lon = "-74.1201043" # Longitude (east/west) for New York City
+url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&exclude=hourly&appid=%s&units=imperial" % ( # change imperial to metric for centigrade
     lat, lon, api_key)
 
 tile_positions = []
