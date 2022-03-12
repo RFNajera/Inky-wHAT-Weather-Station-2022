@@ -297,16 +297,25 @@ while(True):
             x = tile_positions[i][0] + (TILE_WIDTH - ICON_SIZE) // 2
             y = tile_positions[i][1]
             img.paste(icon, (x, y))
-            text = str(int(100 * days[i].pop)) + "%"
+            text = str(int(100 * days[i].pop)) + "%" # Precipitation probability
             w, h = font.getsize(text)
             x = tile_positions[i][0] + (TILE_WIDTH - w) // 2
             y = tile_positions[i][1] + ICON_SIZE + SPACE
             draw.text((x, y), text, inky_display.BLACK, font)
-            text = str(days[i].min) + "|" + str(days[i].max) + "°"
+            text = str(days[i].min) + "|" + str(days[i].max) + "°" # Min and max temps
             w, h = font.getsize(text)
             x = tile_positions[i][0] + (TILE_WIDTH - w) // 2
             y += FONT_SIZE
             draw.text((x, y), text, inky_display.RED, font)
+            date = datetime.fromtimestamp(days[i].sunrise) # Adding date
+            my_day = date.date().day
+            my_month = date.date().month
+            my_date = f"{my_month}-{my_day}"
+            text = str(my_date)
+            w, h = font.getsize(text)
+            x = tile_positions[i][0] + (TILE_WIDTH - w) // 2
+            y += FONT_SIZE
+            draw.text((x, y), text, inky_display.BLACK, font_small)
 
         if (USE_INKY):
             now = datetime.now() # Gets the time from the system
