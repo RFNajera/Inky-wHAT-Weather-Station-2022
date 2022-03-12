@@ -257,6 +257,9 @@ inky_display.set_border(inky_display.RED)
 font = ImageFont.truetype(
     "fonts/BungeeColor-Regular_colr_Windows.ttf", FONT_SIZE)
 
+font_small = ImageFont.truetype(
+    "fonts/BungeeColor-Regular_colr_Windows.ttf", 14) # Small font for updated date and time
+
 old_days = []
 
 while(True):
@@ -306,6 +309,9 @@ while(True):
             draw.text((x, y), text, inky_display.RED, font)
 
         if (USE_INKY):
+            now = datetime.now() # Gets the time from the system
+            last_update = "Updated:  " + now.strftime("%m-%d-%y %H:%M") # Creates the string for the last updated
+            draw.text((200,285), last_update, inky_display.RED, font_small) # Draws the text using the font_small from above
             inky_display.set_image(img)
             inky_display.show()
         else:
