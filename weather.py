@@ -302,7 +302,7 @@ while(True):
             x = tile_positions[i][0] + (TILE_WIDTH - w) // 2
             y = tile_positions[i][1] + ICON_SIZE + SPACE
             draw.text((x, y), text, inky_display.BLACK, font)
-            text = str(days[i].min) + "|" + str(days[i].max) + "°" # Min and max temps
+            text = str(days[i].min) + "|" + str(days[i].max) + "°F" # Min and max temps
             w, h = font.getsize(text)
             x = tile_positions[i][0] + (TILE_WIDTH - w) // 2
             y += FONT_SIZE
